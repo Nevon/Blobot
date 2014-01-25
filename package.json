@@ -26,11 +26,11 @@
   "dependencies": {
     "hubot":         ">= 2.6.0 < 3.0.0",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
-    "hubot-xmpp": "git+ssh://git@github.com:Nevon/hubot-xmpp.git",
+    "hubot-xmpp": "https://github.com/Nevon/hubot-xmpp.git",
     "underscore": "*",
     "githubot": "0.4.x",
     "date-utils": ">=1.2.5",
-    "hubot-lokaltrafik": "git+ssh://git@github.com:Nevon/hubot-lokaltrafik.git"
+    "hubot-lokaltrafik": "https://github.com/Nevon/hubot-lokaltrafik.git"
   },
 
   "engines": {
