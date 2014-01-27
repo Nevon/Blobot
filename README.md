@@ -1,8 +1,9 @@
-# Hubot
+# Blobot
 
-This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
+This is a version of GitHub's Campfire bot. He's pretty cool. Blobot hangs out in our chatrooms at [Blocket](http://blocket.se).
 
-This version is designed to be deployed on [Heroku][heroku]. This README was generated for you by hubot to help get you started. Definitely update and improve to talk about your own instance, how to use and deploy, what functionality he has, etc!
+This repository contains a pretty standard Hubot installation. Most custom scripts are included as external dependencies via `npm`, and are available from my other repos.
+
 
 [heroku]: http://www.heroku.com
 
@@ -56,7 +57,7 @@ about redis at all.
 Adapters are the interface to the service you want your hubot to run on. This
 can be something like Campfire or IRC. There are a number of third party
 adapters that the community have contributed. Check
-[Hubot Adapters][hubot-adapters] for the available ones.
+[Hubot Adapters][hubot-adapters] for the available ones. At Blocket, we use the hubot-xmpp adapter.
 
 If you would like to run a non-Campfire or shell adapter you will need to add
 the adapter package as a dependency to the `package.json` file in the
@@ -100,7 +101,7 @@ name as a double quoted string to the `external-scripts.json` file in this repo.
 
 ## Deployment
 
-    % heroku create --stack cedar
+    % heroku create --stack cedar --region eu
     % git push heroku master
     % heroku ps:scale app=1
 
@@ -111,7 +112,7 @@ and add the Redis to Go addon to your app.
 
 If you run into any problems, checkout Heroku's [docs][heroku-node-docs].
 
-You'll need to edit the `Procfile` to set the name of your hubot.
+You'll need to edit the `Procfile` to set the name of your hubot as well as what adapter to use.
 
 More detailed documentation can be found on the
 [deploying hubot onto Heroku][deploy-heroku] wiki page.
@@ -127,27 +128,9 @@ Please check out the [deploying hubot onto UNIX][deploy-unix] and
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 [deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 
-## Campfire Variables
+## Environment variables
 
-If you are using the Campfire adapter you will need to set some environment
-variables. Refer to the documentation for other adapters and the configuraiton
-of those, links to the adapters can be found on [Hubot Adapters][hubot-adapters].
-
-Create a separate Campfire user for your bot and get their token from the web
-UI.
-
-    % heroku config:add HUBOT_CAMPFIRE_TOKEN="..."
-
-Get the numeric IDs of the rooms you want the bot to join, comma delimited. If
-you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42` 
-and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
-
-    % heroku config:add HUBOT_CAMPFIRE_ROOMS="42,1024"
-
-Add the subdomain hubot should connect to. If you web URL looks like
-`http://mysubdomain.campfirenow.com` then you'd add it like this:
-
-    % heroku config:add HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
+Some adapters and scripts require you to set a number of environment variables. Refer to the documentation for other adapters and the configuraiton of those, links to the adapters can be found on [Hubot Adapters][hubot-adapters].
 
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
 
