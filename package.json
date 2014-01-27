@@ -29,8 +29,7 @@
     "hubot-xmpp": ">=0.1.9",
     "underscore": "*",
     "githubot": "0.4.x",
-    "date-utils": ">= 1.2.5",
-    "hubot-lokaltrafik": "git+https://github.com/Nevon/hubot-lokaltrafik.git"
+    "date-utils": ">= 1.2.5"
   },
 
   "engines": {
