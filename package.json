@@ -30,7 +30,7 @@
     "underscore": "*",
     "githubot": "0.4.x",
     "date-utils": ">= 1.2.5",
-    "hubot-stockholm-foodtrucks": "*",
+    "hubot-stockholm-foodtrucks": ">=0.0.2",
     "hubot-stews": ">=0.0.2"
   },
 
