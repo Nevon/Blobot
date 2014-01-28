@@ -9,4 +9,3 @@ module.exports = (robot) ->
     response = "Sorry, I'm a diva and only respond to #{robot.name}"
     response += " or #{robot.alias}" if robot.alias
     msg.reply response
-    return
