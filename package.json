@@ -30,7 +30,8 @@
     "underscore": "*",
     "githubot": "0.4.x",
     "date-utils": ">= 1.2.5",
-    "hubot-stews": "git+https://github.com/Nevon/hubot-stews.git"
+    "hubot-stews": "git+https://github.com/Nevon/hubot-stews.git",
+    "hubot-stockholm-foodtrucks": "*"
   },
 
   "engines": {
